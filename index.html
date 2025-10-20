@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Dra. Kenia Dorneles — Ginecologia & Obstetrícia</title>
+  <meta name="description" content="Acolhimento e cuidado em cada fase da sua vida. Ginecologia, Obstetrícia, Colposcopia e Estética Íntima.">
+  <link href="KD-principal.png" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#">
+      <div class="logo__circle">
+        <svg viewBox="0 0 64 64" class="logo__svg">
+          <path d="M32 10c6 6 4 10 0 14c-4-4-6-8 0-14zM16 26c6-2 10 2 16 10c6-8 10-12 16-10M24 36c2 4 4 8 8 18c4-10 6-14 8-18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="brand"><b>Dra. Kenia Dorneles</b><small>Ginecologista e Obstetra</small></span>
+    </a>
+    <button class="hamb" id="hamb"><span class="hamb__bg"></span><span class="hamb__bars"></span></button>
+    <nav class="nav__links" id="menu">
+      <a href="#servicos">Serviços</a><a href="#sobre">Quem sou</a>
+      <a href="#depoimentos">Depoimentos</a><a href="#faq">FAQ</a><a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero container">
+    <div>
+      <h1>Acolhimento e cuidado em cada fase da sua vida.</h1>
+      <p class="muted">Atendimento em Ginecologia e Obstetrícia com ciência, sensibilidade e comunicação clara.</p>
+      <a class="btn btn--brand" href="#contato">Agendar consulta</a>
+    </div>
+    <figure class="hero__photo"><img src="KD principal.png" alt="Dra. Kenia Dorneles"></figure>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2>Serviços</h2>
+      <div class="services">
+        <article class="service">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="10" fill="none" stroke="#743142" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Consulta Ginecológica</h3>
+          <p>Prevenção, saúde sexual e reprodutiva, climatério e planejamento.</p>
+        </article>
+
+        <article class="service">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="24"><rect x="4" y="5" width="16" height="14" rx="3" fill="none" stroke="#743142" stroke-width="1.6"/></svg>
+          </div>
+          <h3>Pré-natal & Parto</h3>
+          <p>Acompanhamento humanizado de baixo e alto risco, com protocolos atualizados.</p>
+        </article>
+
+        <article class="service">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="24"><path d="M5 8h14M7 13h10M9 18h6" stroke="#743142" stroke-width="1.6" fill="none"/></svg>
+          </div>
+          <h3>Colposcopia</h3>
+          <p>Investigação e conduta baseada em evidências para o colo do útero.</p>
+        </article>
+
+        <article class="service">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="24"><path d="M6 12c3-6 9-6 12 0M7 15c2-3 8-3 10 0" stroke="#743142" stroke-width="1.6" fill="none"/></svg>
+          </div>
+          <h3>Estética Íntima</h3>
+          <p>Protocolos seguros para conforto e autoestima feminina.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+ <section id="sobre" class="section">
+  <div class="container about">
+    <div>
+      <h2>Quem sou</h2>
+      <p class="muted">Dedicada a cuidar de mulheres com ciência e sensibilidade.</p>
+      <p>Sou <b>Dra. Kenia Dorneles</b>, Ginecologista e Obstetra. Minha atuação integra
+        prevenção, diagnóstico e acompanhamento contínuo, com foco em comunicação clara e decisões compartilhadas.</p>
+      <ul class="badges"><li>CRM/TO 2864</li><li>RQE 1871</li><li>Membro de sociedade de especialidade</li></ul>
+    </div>
+
+    <!-- 🖼️ Carrossel de imagens “Quem sou” -->
+    <figure class="about-gallery" aria-label="Fotos da Dra. Kenia">
+      <div class="about-track" id="aboutTrack">
+        <img class="about-slide" src="KD 2.jpg" alt="Retrato da Dra. Kenia 1">
+        <img class="about-slide" src="KD 3.png" alt="Retrato da Dra. Kenia 2">
+        <img class="about-slide" src="KD principal.png" alt="Retrato da Dra. Kenia 3">
+      </div>
+      <div class="about-dots" id="aboutDots" aria-hidden="true"></div>
+    </figure>
+  </div>
+</section>
+
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos" class="section">
+    <div class="container testi">
+      <h2>Depoimentos</h2>
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card"><p>“Desde a recepção até a consulta, me senti acolhida e bem orientada. Saí tranquila e segura.”</p><div class="testi-meta">— Marina Alves • Gurupi/TO</div></div>
+        <div class="testi-card"><p>“A Dra. Kenia explica com paciência e clareza. O pré-natal tem sido leve e humano.”</p><div class="testi-meta">— Renata Carvalho • Paraíso do TO</div></div>
+        <div class="testi-card"><p>“Consulta detalhada e respeitosa. Finalmente encontrei uma ginecologista que me escuta.”</p><div class="testi-meta">— Luísa Santos • Palmas/TO</div></div>
+        <div class="testi-card"><p>“Agendamento fácil pelo WhatsApp e retorno rápido. Excelente experiência.”</p><div class="testi-meta">— Camila Ribeiro • Gurupi/TO</div></div>
+        <div class="testi-card"><p>“Profissional atualizada, empática e objetiva. Recomendo de olhos fechados.”</p><div class="testi-meta">— Bruna Nogueira • Miracema/TO</div></div>
+      </div>
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </section>
+<!-- FAQ -->
+<section id="faq" class="section">
+  <div class="container faq">
+    <h2>Perguntas Frequentes</h2>
+
+    <details>
+      <summary>Como é a primeira consulta ginecológica?</summary>
+      <div class="ans">
+        A primeira consulta é conduzida com acolhimento e respeito. É o momento de conhecer a paciente, conversar sobre histórico de saúde, ciclo menstrual e tirar dúvidas com tranquilidade.
+      </div>
+    </details>
+
+    <details>
+      <summary>Com que frequência devo ir ao ginecologista?</summary>
+      <div class="ans">
+        O ideal é realizar consultas de rotina anualmente, mesmo sem sintomas, para manter o acompanhamento preventivo e garantir o diagnóstico precoce de alterações.
+      </div>
+    </details>
+
+    <details>
+      <summary>O que levar para a consulta de pré-natal?</summary>
+      <div class="ans">
+        Leve exames anteriores, cartão de gestante (se houver) e anotações sobre sintomas ou dúvidas. O objetivo é um cuidado contínuo e personalizado durante toda a gestação.
+      </div>
+    </details>
+  </div>
+</section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="container contato-grid">
+      <div>
+        <h2>Contato</h2>
+        <address class="address-box">Endereço:  R. Alfredo Nasser, 1293 - Centro, Paraíso do Tocantins - TO, 77600-000</address>
+        <div class="contact-buttons">
+          <a class="btn btn--brand" href="https://wa.me/5563992166768" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="btn btn--ghost" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn--ghost" href="https://maps.google.com/" target="_blank" rel="noopener">Ver no Maps</a>
+        </div>
+      </div>
+      <div class="map-wrapper"><iframe src="https://www.google.com/maps?q=-10.175,-48.882&z=14&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer"><p>© 2025 Dra. Kenia Dorneles — Todos os direitos reservados.</p></footer>
+
+<a id="waFloat"
+   class="btn-whats-float two-step"
+   href="https://wa.me/5563992166768?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta."
+   aria-label="Agendar no WhatsApp">
+  <!-- Ícone WhatsApp -->
+  <svg class="icon-whats" viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M19.11 17.05c-.28-.14-1.63-.8-1.88-.9s-.44-.14-.62.14-.71.9-.87 1.09-.32.21-.6.07a6.95 6.95 0 0 1-2.05-1.27 7.63 7.63 0 0 1-1.41-1.76c-.15-.25 0-.38.11-.52.11-.11.25-.28.36-.43s.15-.25.22-.43.04-.32-.02-.45c-.07-.14-.62-1.49-.85-2.05s-.46-.47-.62-.47h-.53c-.18 0-.45.07-.69.32s-.91.9-.91 2.19 1 .25 1.14.53 2.01 3.33 4.87 4.67c.68.33 1.22.52 1.64.67.69.22 1.32.19 1.81.12.55-.08 1.63-.67 1.86-1.32s.23-1.21.16-1.32-.25-.18-.53-.32zM16.03 2.67A13.3 13.3 0 0 0 3 15.94a13.1 13.1 0 0 0 1.76 6.6L3 29l6.6-1.73a13.36 13.36 0 0 0 6.43 1.66h.01A13.3 13.3 0 0 0 29.07 15.6a13.28 13.28 0 0 0-13.04-12.93z" fill="#fff"/>
+  </svg>
+  <span class="whats-text">Agendar agora</span>
+</a>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>

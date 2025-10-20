@@ -1,0 +1,319 @@
+:root{
+  --rose-900:#7C3140; --rose-700:#A05365; --rose-300:#E4C9CF;
+  --beige:#F6ECEE; /* bege da paleta */
+  --muted:#6b7280; --line:#eadfe2; --radius:16px;
+  --container:min(92vw,1140px); --shadow:0 10px 26px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:#fff;color:#1a1a1a;line-height:1.65}
+h1,h2,h3{font-family:"Cinzel",serif;color:#1a1a1a;margin-bottom:.6rem}
+h1{font-size:clamp(30px,6vw,56px)} h2{font-size:clamp(24px,4.4vw,36px)}
+.container{width:var(--container);margin:auto} .section{padding:60px 0}
+/* Remover rolagem horizontal global */
+html, body { overflow-x: hidden; width: 100%; }
+
+/* Impedir que o carrossel gere largura extra */
+.testi { overflow: hidden; }     /* ou overflow-x: hidden; */
+img, iframe { max-width: 100%; }
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #f3e6e9}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:inherit}
+.logo__circle{width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff 0 55%,#f2dfe3 56% 100%);border:2px solid #ead9de;display:grid;place-items:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7),0 2px 6px rgba(0,0,0,.05);color:var(--rose-900)}
+.logo__svg{width:72%;height:72%}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand b{color:var(--rose-900)} .brand small{color:var(--rose-700);font-weight:700}
+.nav__links{display:flex;gap:8px}
+.nav__links a{padding:.55rem .85rem;border-radius:999px;font-weight:700;text-decoration:none;color:#1a1a1a}
+.nav__links a:hover{background:#f8eff1}
+.hamb{display:none;width:46px;height:38px;border:0;background:transparent;position:relative;cursor:pointer}
+.hamb__bg{position:absolute;inset:0;border-radius:12px;background:rgba(124,49,64,.08)}
+.hamb__bars,.hamb__bars::before,.hamb__bars::after{position:absolute;left:50%;transform:translateX(-50%);content:"";width:22px;height:2px;background:var(--rose-900);border-radius:2px}
+.hamb__bars{top:50%}.hamb__bars::before{top:-8px}.hamb__bars::after{top:8px}
+@media (max-width:900px){
+  .hamb{display:block}
+  .nav__links{position:fixed;inset:72px 12px auto 12px;display:none;flex-direction:column;background:#fff;border:1px solid #ead9de;border-radius:18px;box-shadow:0 20px 40px rgba(0,0,0,.12);padding:10px}
+  .nav__links.show{display:flex}
+  .nav__links a{font-size:18px;padding:16px;border-radius:12px}
+  .nav__links a+a{border-top:1px dashed rgba(124,49,64,.25)}
+}
+
+/* ===== Hero ===== */
+.hero{padding:80px 0;display:grid;gap:24px;align-items:center}
+@media(min-width:940px){.hero{grid-template-columns:1fr .9fr}}
+.hero__photo img{width:100%;border-radius:18px;box-shadow:var(--shadow);aspect-ratio:3/4;object-fit:cover}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.15rem;border-radius:999px;font-weight:800;text-decoration:none;white-space:nowrap}
+.btn--brand{background:var(--rose-900);color:#fff;box-shadow:0 6px 18px rgba(124,49,64,.22)}
+.btn--brand:hover{background:#6E2C3A}
+.btn--ghost{border:1px solid var(--line);background:#fff}
+
+/* ===== Serviços ===== */
+.services{display:grid;gap:18px;margin-top:18px}
+@media(min-width:960px){.services{grid-template-columns:repeat(4,1fr)}}
+.service{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;transition:all .35s ease;cursor:pointer}
+.service .icon{width:46px;height:46px;border-radius:12px;border:1px solid #ead9de;display:grid;place-items:center;margin-bottom:10px}
+.service h3{font-size:18px;margin-bottom:6px;color:#1a1a1a}
+.service p{font-size:15px;color:#333}
+.service:hover{background:#743142;color:#fff;box-shadow:0 10px 24px rgba(116,49,66,.25);transform:translateY(-3px)}
+.service:hover h3{color:var(--beige)}              /* título bege no hover */
+.service:hover svg{stroke:#fff}                    /* ícone branco no hover */
+
+/* ===== Quem sou ===== */
+.about{display:grid;gap:20px;align-items:center}
+@media(min-width:980px){.about{grid-template-columns:1fr 1fr}}
+.about__photo img{width:100%;border-radius:16px;box-shadow:var(--shadow);aspect-ratio:4/3;object-fit:cover}
+/* Badges roxas elegantes */
+.badges {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  padding: 0;
+}
+
+.badges li {
+  background: var(--rose-900); /* roxo da paleta */
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 10px rgba(124,49,64,0.25);
+  transition: all 0.25s ease;
+}
+
+.badges li:hover {
+  background: var(--rose-700); /* tom um pouco mais claro no hover */
+  transform: translateY(-2px);
+}
+
+
+/* ===== Depoimentos ===== */
+.testi{position:relative}
+.testi-track{display:flex;gap:16px;transition:transform .6s ease-in-out}
+.testi-card{min-width:100%;background:#fff;border:1px solid #f0dfe2;border-radius:16px;padding:18px;box-shadow:0 10px 28px rgba(0,0,0,.06)}
+.testi-meta{color:var(--rose-900);font-weight:700;margin-top:10px}
+.testi-dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.testi-dots button{width:8px;height:8px;border-radius:50%;border:1px solid var(--rose-300);background:#fff;opacity:.6;cursor:pointer}
+.testi-dots button[aria-current=true]{background:var(--rose-900);opacity:1}
+
+/* ===== FAQ ===== */
+.faq details{border:1px solid #ead9de;border-radius:14px;padding:14px 16px;background:#fff}
+.faq summary{font-weight:700;cursor:pointer}
+.faq .ans{padding-top:8px;color:#555}
+
+/* ===== Contato ===== */
+.contato-grid{display:grid;gap:26px;align-items:start}
+@media(min-width:860px){.contato-grid{grid-template-columns:1fr 1fr}}
+.address-box{background:var(--beige);border-left:3px solid var(--rose-900);padding:12px 16px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+.contact-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.map-wrapper{position:relative;width:100%;height:300px;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.map-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:12px}
+
+/* ===== Footer ===== */
+.footer{border-top:1px solid #f0dfe2;padding:20px;text-align:center;color:#777}
+
+/* Botão flutuante base */
+.btn-whats-float{
+  position:fixed; right:16px; bottom:16px;
+  display:flex; align-items:center; gap:8px;
+  background:var(--rose-900); color:#fff; text-decoration:none;
+  border-radius:999px; padding:14px;  /* começa redondinho */
+  box-shadow:0 10px 28px rgba(124,49,64,.28);
+  font-weight:800; z-index:60; transition:all .25s ease;
+}
+.btn-whats-float:hover{ background:#6E2C3A; transform:translateY(-2px); }
+
+.icon-whats{ width:22px; height:22px; fill:#fff; }
+
+/* Texto colapsado por padrão */
+.whats-text{
+  opacity:0; max-width:0; overflow:hidden; white-space:nowrap;
+  transition:all .3s ease;
+}
+
+/* Quando expandir (1º clique), vira “pílula” com texto */
+.btn-whats-float.expanded{
+  padding:14px 18px;
+}
+.btn-whats-float.expanded .whats-text{
+  opacity:1; max-width:140px;  /* mostra o texto */
+}
+
+/* Mobile: mesmo comportamento */
+@media (max-width:600px){
+  .btn-whats-float{ right:16px; bottom:16px; }
+  .btn-whats-float.expanded .whats-text{ max-width:120px; }
+}
+
+
+/* WhatsApp mantém fundo sólido */
+.contact-buttons a[href*="wa.me"] {
+  background: var(--rose-900);
+  color: #fff;
+  border: none;
+  box-shadow: 0 6px 18px rgba(124,49,64,.22);
+}
+
+.contact-buttons a[href*="wa.me"]:hover {
+  background: #6E2C3A;
+  transform: translateY(-2px);
+}
+@media (min-width:940px){
+  .hero {
+    text-align: left;
+  }
+  .hero > div {
+    margin: 0;
+  }
+}
+/* Ajuste de espaçamento no Hero */
+.hero > div {
+  max-width: 620px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* mantém o alinhamento elegante à esquerda */
+  gap: 1.2rem; /* espaçamento uniforme entre título, parágrafo e botão */
+}
+
+.hero h1 {
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.hero .btn {
+  margin-top: 0.2rem;
+}
+/* ===== Carrossel “Quem sou” ===== */
+.about-gallery{
+  position:relative;
+  width:100%;
+  overflow:hidden;            /* evita rolagem horizontal */
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  background:#fff;
+  aspect-ratio:4/3;           /* mantém proporção elegante */
+}
+.about-track{
+  display:flex;
+  height:100%;
+  transition:transform .6s ease-in-out;
+  will-change:transform;
+}
+.about-slide{
+  min-width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.about-dots{
+  position:absolute;left:50%;bottom:10px;transform:translateX(-50%);
+  display:flex;gap:6px;
+}
+.about-dots button{
+  width:8px;height:8px;border-radius:50%;
+  border:1px solid var(--rose-300);background:#fff;opacity:.7;cursor:pointer;
+}
+.about-dots button[aria-current="true"]{background:var(--rose-900);opacity:1}
+
+/* garante que o carrossel não estoure a largura em mobile */
+@media (max-width:980px){
+  .about{grid-template-columns:1fr}
+  .about-gallery{margin-top:14px}
+}
+/* Utilitário universal para imagens que devem se ajustar à caixa */
+.fit-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* preenche sem distorcer */
+  object-position: center;    /* centraliza cortes */
+}
+
+/* Carrossel “Quem sou” — garante caixa com altura estável */
+.about-gallery{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+
+  /* altura elástica (se adapta ao viewport) */
+  height: clamp(260px, 45vw, 460px);
+}
+
+/* Slides ocupam 100% da caixa; imagem usa o utilitário */
+.about-track{ display:flex; height:100%; transition:transform .6s ease-in-out; }
+.about-slide{ min-width:100%; height:100%; display:block; }
+
+/* (opcional) Hero: evita distorção da foto principal também */
+.hero__photo{ height: clamp(280px, 46vw, 520px); }
+.hero__photo img{ height:100%; width:100%; object-fit:cover; object-position:center; }
+/* ===== FAQ ===== */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.faq h2 {
+  text-align: left;
+  font-family: "Cinzel", serif;
+  margin-bottom: 12px;
+}
+
+.faq details {
+  border: 1px solid var(--rose-300);
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px 18px;
+  box-shadow: 0 6px 16px rgba(124,49,64,0.06);
+  transition: all 0.25s ease;
+}
+
+.faq details:hover {
+  box-shadow: 0 8px 20px rgba(124,49,64,0.12);
+  transform: translateY(-2px);
+}
+
+.faq summary {
+  font-weight: 700;
+  color: var(--rose-900);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color .2s ease;
+}
+
+.faq summary::after {
+  content: "+";
+  font-size: 18px;
+  color: var(--rose-900);
+  transition: transform .3s ease;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq .ans {
+  margin-top: 8px;
+  color: #444;
+  font-size: 15px;
+  line-height: 1.6;
+  border-top: 1px solid #f3e6e9;
+  padding-top: 10px;
+}
