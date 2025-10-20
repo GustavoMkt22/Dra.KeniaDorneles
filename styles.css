@@ -317,3 +317,9 @@ img, iframe { max-width: 100%; }
   border-top: 1px solid #f3e6e9;
   padding-top: 10px;
 }
+#sobre p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7; /* melhora a legibilidade */
+  hyphens: auto; /* quebra suave das palavras longas */
+}
